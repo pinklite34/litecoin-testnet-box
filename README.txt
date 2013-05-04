@@ -52,10 +52,10 @@ To stop generating blocks:
 
   $ make generate-false
 
-OR, point your mining software at the address of the test machine, on either ports 19334 (Server 1) or 19344 (Server 2)
-using the username 'testnet' and the password 'testnet'. With a 7970, you should find a new block every second or so.
+OR, point your mining software at the address of the test machine, on either ports 19334 (Server 1) or 19344 (Server 2) using the username 'testnet' and the password 'testnet'. With a 7970, you should find a new block every second or so.
 
 Using the command (if you are running the testnet on the same box as the miner - otherwise change 127.0.0.1 to the address of the testnet)
+
 ./cgminer --scrypt -o http://127.0.0.1:19334 -O testnet:testnet --shaders 2048 --thread-concurrency 8192 -w 256 -g2 -I 13 --auto-gpu --temp-overheat 81 --gpu-vddc 1.030 --temp-cutoff 97 --gpu-fan=100 --gpu-engine 700-1000 --gpu-memclock 1500
 
 you should see this:
