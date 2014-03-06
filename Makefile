@@ -18,6 +18,9 @@ getinfo:
 	$(S1) getinfo
 	$(S2) getinfo
 	
+getaccountaddress:
+	$(S1) getaccountaddress ""
+
 stop:
 	$(S1) stop
 	$(S2) stop

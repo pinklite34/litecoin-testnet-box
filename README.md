@@ -55,6 +55,12 @@ To stop generating blocks:
 
 OR, point your mining software at the address of the test machine, port 19334 (Server 1) using the username `testnet` and the password `myAmazingRPCPassword`. With a decent GPU, you should find a new block every second or so initially. If you continue to mine, the difficulty of the network will adjust to your miner.
 
+To get the address the mined coins will end up in, run:
+
+    $ make getaccountaddress
+
+That will query just the first node, as that is the one receiving the mining rewards.
+
 # Mining with `cgminer`
 Using the command (if you are running the testnet on the same box as the miner - otherwise change 127.0.0.1 to the address of the testnet)
 
