@@ -1,26 +1,26 @@
-BITCOIND=litecoind
-B1_FLAGS=
-B2_FLAGS=
-B1=$(BITCOIND) -datadir=1 $(B1_FLAGS)
-B2=$(BITCOIND) -datadir=2 $(B2_FLAGS)
+LITECOIND=litecoind
+S1_FLAGS=
+S2_FLAGS=
+S1=$(LITECOIND) -datadir=1 $(S1_FLAGS)
+S2=$(LITECOIND) -datadir=2 $(S2_FLAGS)
 
 start:
-	$(B1) -daemon
-	$(B2) -daemon
+	$(S1) -daemon
+	$(S2) -daemon
 	
 generate-true:
-	$(B1) setgenerate true
+	$(S1) setgenerate true
 	
 generate-false:
-	$(B1) setgenerate false
+	$(S1) setgenerate false
 	
 getinfo:
-	$(B1) getinfo
-	$(B2) getinfo
+	$(S1) getinfo
+	$(S2) getinfo
 	
 stop:
-	$(B1) stop
-	$(B2) stop
+	$(S1) stop
+	$(S2) stop
 
 clean:
 	rm -rf 1/testnet*
