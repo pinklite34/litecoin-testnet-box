@@ -23,7 +23,5 @@ stop:
 	$(B2) stop
 
 clean:
-	git clean -fd 1/testnet3
-	git clean -fd 2/testnet3
-	git checkout -- 1/testnet3
-	git checkout -- 2/testnet3
+	rm -rf 1/testnet*
+	rm -rf 2/testnet*
